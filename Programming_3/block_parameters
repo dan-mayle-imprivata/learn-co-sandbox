@@ -1,0 +1,37 @@
+# Blocks can receive parameters that are accessible from within
+# the block.
+
+5.times do |index|
+  puts index
+end
+
+# result 0,1,2,3,4
+
+# Block parameters are surrounded by | symbols, sometimes     # referred to as 'pipes.'
+
+=begin
+
+We see here that using a block parameter with our times loop, we were able to build a simple counter, but without the need of an external variable like counter!
+
+=end
+
+### Block with Arrays ###
+
+# old
+
+counter = 0
+array = [1,2,3,4,5]
+ 
+while array[counter] do
+  puts array[counter]
+  counter += 1
+end
+
+# new
+
+array = [1,2,3,4,5]
+length = array.length
+ 
+length.times do |index|
+  puts array[index]
+end
